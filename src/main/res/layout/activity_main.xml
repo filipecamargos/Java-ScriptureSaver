@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/BookLabel"
+        android:layout_width="142dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Book"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/Book"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/LabelVerse"
+        android:layout_width="142dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Verse"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/Verse"
+        app:layout_constraintTop_toBottomOf="@+id/LabelChapter" />
+
+    <EditText
+        android:id="@+id/Verse"
+        android:layout_width="185dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="52dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Chapter" />
+
+    <Button
+        android:id="@+id/Load"
+        android:layout_width="180dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="16dp"
+        android:onClick="loadSavedInfo"
+        android:text="LOAD SCRIPTURE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Submit" />
+
+    <EditText
+        android:id="@+id/Book"
+        android:layout_width="185dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="68dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Chapter"
+        android:layout_width="185dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Book" />
+
+    <Button
+        android:id="@+id/Submit"
+        android:layout_width="180dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="32dp"
+        android:onClick="sendInfo"
+        android:text="SUBMIT SCRIPTURE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Verse" />
+
+    <TextView
+        android:id="@+id/LabelChapter"
+        android:layout_width="142dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Chapter"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/Chapter"
+        app:layout_constraintTop_toBottomOf="@+id/BookLabel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
